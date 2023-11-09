@@ -53,6 +53,13 @@ class _HomeScreenState extends State<HomeScreen> {
   );
 
   @override
+  void initState() {
+    super.initState();
+
+    Geolocator.getCurrentPosition().then((value) => print(value));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: renderAppBar(),
